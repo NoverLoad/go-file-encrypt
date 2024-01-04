@@ -93,10 +93,7 @@ func getPassword() []byte {
 }
 
 func validatePassword(password1, password2 []byte) bool {
-	if !bytes.Equal(password1, password2) {
-		return false
-	}
-	return true
+	return bytes.Equal(password1, password2)
 }
 
 func validateFile(file string) bool {
